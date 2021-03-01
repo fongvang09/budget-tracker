@@ -22,6 +22,9 @@ self.addEventListener('install', event => {
       .open(CACHE_NAME)
       .then((cache) => cache.addAll(FILES_TO_CACHE))
       .then(self.skipWaiting())
+      .catch(function (err) {
+        console.log("Error");
+      })
   );
 
   // tells browser to activate this service worker immediately once it has finished installing
