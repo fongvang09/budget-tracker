@@ -2,7 +2,7 @@ const FILES_TO_CACHE = [
   '/',
   '/index.html',
   '/offline.html',
-
+  // '../models/transaction.js',
   '/assets/css/style.css',
   'https://fonts.googleapis.com/css?family=Istok+Web|Montserrat:800&display=swap',
   'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css',
@@ -23,8 +23,12 @@ self.addEventListener('install', event => {
       .then((cache) => cache.addAll(FILES_TO_CACHE))
       .then(self.skipWaiting())
       .catch(function (err) {
-        console.log("Error");
+        console.log("Error")
       })
+      .catch(function (err) {
+        console.log("Error1");
+      })
+      
   );
 
   // tells browser to activate this service worker immediately once it has finished installing
