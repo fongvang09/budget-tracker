@@ -1,5 +1,6 @@
 import { useIndexedDb } from "./indexedDb";
-import { formatDate, getParams } from "./utils";
+// import { formatDate, getParams } from "./utils";
+
 // Clear the article container and insert placeholder articles
 function renderPlaceHolders() {
   const articleContainer = document.querySelector(".article-container");
